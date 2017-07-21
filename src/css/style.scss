@@ -1,0 +1,9 @@
+$gray: #3F3F3F;
+
+
+.container {
+    color: $gray;
+    & nav {
+        background: lighter($gray, 20%);
+    }
+}

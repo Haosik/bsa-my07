@@ -8,32 +8,42 @@ module.exports = {
 		path: __dirname + "/dist",
 		filename: "bundle.js"
 	},
-	module:{
-		rules: [
-			{
-				test: /\.css$/,
-				use: [ 'style-loader', 'css-loader' ]
+	module: {
+		rules: [{
+				test: /\.scss$/,
+				loaders: ['style-loader', 'css-loader', 'sass-loader',
+					'postcss-loader'
+				]
 			},
 			{
 				test: /\.js$/,
 				exclude: /(node_modules)/,
 				use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['env']
-                    }
+					loader: 'babel-loader',
+					options: {
+						presets: ['env']
+					}
 				}
 			}
 		]
 	},
-	plugins: [new webpack.optimize.UglifyJsPlugin({
-		minimize: true,
-		compress: {
-			warnings: false
-		}
-	})],
+	plugins: [
+		new webpack.optimize.UglifyJsPlugin({
+			minimize: true,
+			compress: {
+				warnings: false
+			}
+		}),
+		// new webpack.LoaderOptionsPlugin({
+		// 	options: {
+		// 		postcss: [
+		// 			autoprefixer(),
+		// 		]
+		// 	}
+		// })
+	],
 	devServer: {
-		inline:true,
+		inline: true,
 		port: 8081
 	}
 }
