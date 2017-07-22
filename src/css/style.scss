@@ -7,3 +7,8 @@ $gray: #3F3F3F;
 		background-color: lighten($gray, 20%);
 	}
 }
+
+.user-div {
+	padding: 30px 80px;
+	background: #fff url('avatar.png') left center no-repeat;
+}

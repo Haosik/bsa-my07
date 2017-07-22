@@ -8,6 +8,7 @@ function userList(users) {
 		sortedUsers.forEach((user) => {
 			const div = document.createElement("div");
 			div.append(`${user.name} ${user.age}`);
+			div.classList.add('user-div');
 			container.appendChild(div);
 		});
 	}

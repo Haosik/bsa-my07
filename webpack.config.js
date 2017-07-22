@@ -10,13 +10,13 @@ module.exports = {
 	},
 	module: {
 		rules: [{
-			enforce: "pre",
+				enforce: "pre",
 				test: /\.scss$/,
 				loaders: ['sass-loader']
 			},
 			{
 				test: /\.scss$/,
-				loaders: ['style-loader', 'css-loader',  'postcss-loader']
+				loaders: ['style-loader', 'css-loader', 'postcss-loader']
 			},
 			{
 				test: /\.js$/,
@@ -27,6 +27,14 @@ module.exports = {
 						presets: ['env']
 					}
 				}
+			}, {
+				test: /\.(png|jpg|gif)$/,
+				use: [{
+					loader: 'url-loader',
+					options: {
+						limit: 30720
+					}
+				}]
 			}
 		]
 	},
