@@ -10,8 +10,13 @@ module.exports = {
 	},
 	module: {
 		rules: [{
+			enforce: "pre",
 				test: /\.scss$/,
-				loaders: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
+				loaders: ['sass-loader']
+			},
+			{
+				test: /\.scss$/,
+				loaders: ['style-loader', 'css-loader',  'postcss-loader']
 			},
 			{
 				test: /\.js$/,
