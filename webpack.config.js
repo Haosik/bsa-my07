@@ -2,7 +2,7 @@ var webpack = require("webpack");
 
 module.exports = {
 	context: __dirname,
-	devtool: "eval-source-map",
+	devtool: false,
 	entry: "./src/js/main.js",
 	output: {
 		path: __dirname + "/dist",
@@ -49,6 +49,10 @@ module.exports = {
 			minimize: true,
 			compress: {
 				warnings: false
+			},
+			comments: false,
+			output: {
+				comments: false,
 			}
 		})
 	],

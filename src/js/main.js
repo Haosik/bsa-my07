@@ -4,7 +4,7 @@ import UserList from './userList';
 // require('../css/style.css');
 import '../css/style.scss';
 
-// Creating mocked users list
+/* Creating mocked users list */
 const users = [{
   name: 'Oksana',
   age: 22,
