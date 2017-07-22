@@ -19,6 +19,12 @@ module.exports = {
 				loaders: ['style-loader', 'css-loader', 'postcss-loader']
 			},
 			{
+				enforce: "pre",
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: "eslint-loader",
+			},
+			{
 				test: /\.js$/,
 				exclude: /(node_modules)/,
 				use: {
