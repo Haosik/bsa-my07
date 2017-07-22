@@ -11,9 +11,7 @@ module.exports = {
 	module: {
 		rules: [{
 				test: /\.scss$/,
-				loaders: ['style-loader', 'css-loader', 'sass-loader',
-					'postcss-loader'
-				]
+				loaders: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
 			},
 			{
 				test: /\.js$/,
@@ -33,14 +31,7 @@ module.exports = {
 			compress: {
 				warnings: false
 			}
-		}),
-		// new webpack.LoaderOptionsPlugin({
-		// 	options: {
-		// 		postcss: [
-		// 			autoprefixer(),
-		// 		]
-		// 	}
-		// })
+		})
 	],
 	devServer: {
 		inline: true,

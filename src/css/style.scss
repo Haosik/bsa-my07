@@ -1,9 +1,9 @@
 $gray: #3F3F3F;
-
-
 .container {
-    color: $gray;
-    & nav {
-        background: lighter($gray, 20%);
-    }
+	background-color: $gray;
+	& nav {
+		display: flex;
+		flex-direction: column;
+		background-color: lighten($gray, 20%);
+	}
 }
